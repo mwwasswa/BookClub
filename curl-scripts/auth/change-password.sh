@@ -13,3 +13,5 @@ curl "http://localhost:4741/change-password" \
   }'
 
 echo
+
+# using this curl to test the change password feature

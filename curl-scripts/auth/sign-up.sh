@@ -13,3 +13,5 @@ curl "http://localhost:4741/sign-up" \
   }'
 
 echo
+
+# this is to help with creating an authenticated user before I can do ahead and create a book
