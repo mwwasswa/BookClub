@@ -12,3 +12,5 @@ curl "http://localhost:4741/sign-in" \
   }'
 
 echo
+
+# using this to test the signing in before I can create a book

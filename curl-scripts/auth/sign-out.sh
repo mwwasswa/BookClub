@@ -7,3 +7,5 @@ curl "http://localhost:4741/sign-out" \
   --header "Authorization: Token token=${TOKEN}"
 
 echo
+
+# using this curl to test the sign out feature
