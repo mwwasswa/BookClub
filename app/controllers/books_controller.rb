@@ -42,15 +42,9 @@ class BooksController < ProtectedController
   end
 
   # DELETE /books/1
-<<<<<<< HEAD
-  @book = current_user.books.find(params[:id])
-  # only the signed in and current_user is able to delete a book
-  def destroy
-=======
   def destroy
     @book = current_user.books.find(params[:id])
     # only the signed in and current_user is able to delete a book
->>>>>>> master
     @book.destroy
   end
 
