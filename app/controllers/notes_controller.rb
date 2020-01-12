@@ -4,7 +4,7 @@ class NotesController < OpenReadController
   # GET /notes
   def index
     @notes = Note.all
-    # @notes = current_user.notess.all
+    #@notes = current_user.notess.all
     # only an authenticated user should be able to see notes.
     render json: @notes
   end
