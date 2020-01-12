@@ -1,25 +1,25 @@
-class BooksController < ProtectedController
+class BooksController < OpenReadController
   # use ProtectedController so that the user has to sign in to access app features
   before_action :set_book, only: %i[show]
 
   # GET /books
   def index
-    # @books = Book.all
-    @books = current_user.books.all
+    @books = Book.all
+    #@books = current_user.books.all
     # only an authenticated user should be able to see a book.
     render json: @books
   end
 
   # GET /books/1
   def show
-    @book = current_user.book
+    #@book = current_user.book
     render json: @book
   end
 
   # POST /books
   def create
-    # @book = Book.new(book_params)
-    @book = current_user.books.build(books_params)
+    @book = Book.new(book_params)
+    #@book = current_user.books.build(books_params)
     # only an authenticated user should be able to create a new book within
     # their account.
 

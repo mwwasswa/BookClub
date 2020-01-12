@@ -1,24 +1,24 @@
-class NotesController < ProtectedController
+class NotesController < OpenReadController
   before_action :set_note, only: %i[show]
 
   # GET /notes
   def index
-    # @notes = Note.all
-    @notes = current_user.notess.all
+    @notes = Note.all
+    # @notes = current_user.notess.all
     # only an authenticated user should be able to see notes.
     render json: @notes
   end
 
   # GET /notes/1
   def show
-    @note = current_user.note
+    #@note = current_user.note
     render json: @note
   end
 
   # POST /notes
   def create
-    # @note = Note.new(note_params)
-    @note = current_user.notes.build(notes_params)
+    @note = Note.new(note_params)
+    #@note = current_user.notes.build(notes_params)
     # only an authenticated user should be able to create a new note within
     # their account.
 
